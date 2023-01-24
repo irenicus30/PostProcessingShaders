@@ -83,7 +83,7 @@ anims/Rotate = SubResource( 5 )
 [node name="Camera" type="Camera" parent="CameraBase"]
 transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 3, 8 )
 
-[node name="MeshInstance" type="MeshInstance" parent="CameraBase/Camera"]
+[node name="ShaderNode" type="MeshInstance" parent="CameraBase/Camera"]
 mesh = SubResource( 7 )
 material/0 = ExtResource( 1 )
 
@@ -96,7 +96,8 @@ margin_right = 106.0
 margin_bottom = 40.0
 text = "depth or idk"
 script = ExtResource( 2 )
-shader_node = NodePath("../../MeshInstance")
+shader_node = NodePath("../../ShaderNode")
+pulse_source = NodePath("../../../../PulseSource")
 
 [node name="PulseSource" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3 )
